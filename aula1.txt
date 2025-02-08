@@ -1,0 +1,170 @@
+Linguagem alto nível, multiparadigma, interpretada e de tipagem dinâmica, conhecida pela sintaxe simples e acessível.
+é orientada a objeto: baseada na criação de uma estrutura e a partir dela trabalha outras funcionalidades.
+
+- alto nível: Mais próxima da linguagem humana, com sintaxe intuitiva
+- multiparadigmas: Suporta diferentes estilos de programação, como orientada a objetos, intuitiva, funcional
+- interpretada: não precisa de compilador, ela lê linha por linha do código, o que facilita os testes e depuração
+- tipagem dinâmica: Não precisa declarar explicitamente os tipos de uma variável 
+
+Linguagem bastante versátil e pode ser usada em diferentes projetos, muito usada em análise de dados e machine learning, automação e backend
+
+Variáveis
+não precisa especificar o tipo da variável, só colocar o nome da variável e o dado. 
+a boa prática usada para nome de variável com espaçamento, usa o _ para sinalizar isso  
+ex: primeiro_valor = 100  
+
+tipos + usados: float, int, boolean, none, undefined, string
+
+funções print e input
+print (usado para mostrar na tela )
+input (usado para inserir dado)
+
+Aula de condicionais
+
+if e else, das para realizar tarefas com condição de uso.
+
+
+if condição == objeto da condição
+
+ex: 
+saldo == True
+if saldo == True:
+	print('Saldo na Conta')
+
+O else usa depois do if para condição contrária do if
+Ex:
+idade = 16
+if idade >= 18:
+    print('Pode dirigir')
+else:
+        print('Não pode dirigir')
+
+Operador Lógico (e) - Usa o and para condições
+Verifica se as duas condições passadas estão sendo satisfeitas, são verdadeiras
+
+idade = 18
+saldo = True
+
+if idade >= 18 and saldo == True:
+    print("Pode tirar habilitação")
+
+Operador Lógico (ou) - usa o or para condições
+Verifica se alguma das duas condições passadas estão sendo satisfeitas, basta uma ser verdadeira
+
+Elif -> condição intermediaria do if e do else, uma condição a mais para comparação (Se.... não....... se)
+
+idade = 18
+saldo = True
+
+if idade >= 18 and saldo == True:
+    print("Pode tirar habilitação")
+elif idade < 18 or saldo == False:
+    print("Você não tem dinheiro ou não idade para tirar habilitação")
+else:
+    print("Condição não foi atendida")
+
+for é usado para condição que tem repetição, loop
+
+for caractere in 'Python': #percorre a palavra
+    print(caractere)
+
+#-------------------------------------
+
+lista_sonhos = ["Tailândia", "Suiça", "México", "Dinamarca"]
+ #percorre indice do array 
+for item in lista_sonhos:  
+    print(item)
+#---------------------------
+contador = 0
+while contador <=10:
+	print (contador)
+	contador += 1
+#---------------------------
+
+lista as do array no javascript
+serve para armazenar diversos dados
+
+lista_compras = ["leite", "laranja", "banana", "macarrão"]
+print(lista_compras)
+
+para chamar item especifici é só wspecoficar o index
+
+print(lista_compras[0]) # chama o 1ºitem
+print(lista_compras[0:2]) #conta 2 itens ["leite", "laranja"]
+print(lista_compras[-1]) #imprime o 1º item de trás pra frente ["macarrão"]
+
+Metodos de manipulação de lista
+#------------------Insert---------------------------------
+.insert -> usa para inserir item na lista (posiçao que será inserida, "nome do item")
+
+frutas = ["maça","uva","pera","pessego", "maça"]
+frutas.insert(2,"banana")
+print(frutas)
+
+#------------Append-------
+
+frutas.append('abacaxi') #adiciona o item no final da lista
+print(frutas)
+
+#---------------sort-------
+frutas.sort() #ordena por rdem numerica ou alfabetica
+print(frutas)
+
+numeros = [3,20,10,18,2,57,14]
+numeros.sort()
+print(numeros)
+
+#-----------Remove----
+
+frutas.remove("pera") #remove o item especificado, a 1ºaparição que achar
+print(frutas)
+
+frutas.index("uva") #informa a casa do item
+
+#========pop-----
+
+frutas.pop() #remove o ulyimo item da lista
+frutas.pop(1) # remove o item pelo index especificado
+print(frutas)
+
+#-----------count------------
+
+quantidade = frutas.count("maça")
+#cria uma copuia da lista e armazena ela em algum lugar
+print("Quantidade: ",quantidade)
+
+TUPLAS
+Igual lista, entretanto ela é imutável, não pode ser modificada e pode ser passada diferentes dads de diferentes tipos, a identificação se é dupla, é o uso da virgula entre os dados. Usa para dados que não pode ou não serão modificas, como dados de cpf ou rg. A tupla é mais eficiente que lista
+
+first_tupla = ("mali",72, True, "banana")
+second_tupla = 34, "ana", "maça", 17420, False
+
+dados = ["nome", 'senha', ('rg', 'cpf'), idade, True] #lista com uma tupla dentro
+
+# dá pra concatenar duas tuplas
+
+pratos= ("Arroz", "Feijão")
+pratos2=("Lasanha", "Yakissoba")
+
+novos_pratos = pratos + pratos2
+
+print(novos_pratos)
+
+print("feijoada" in novos_pratos)
+
+#-------kista para tupla----
+
+lista = [1,5,7]
+
+tuple = tuple(lista)
+
+print(type(tuple))
+
+print(tuple)
+
+# --------tupla para lista------- usa pra modificar a tula, se necessário
+
+nova_lista = list(tuple)
+print(type(nova_lista))
+
+print(nova_lista)
